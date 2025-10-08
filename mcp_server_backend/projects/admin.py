@@ -1,13 +1,7 @@
 from django.contrib import admin
-from projects.models import Project
-from scans.models import ScanRun
+from .models import Project
 
 @admin.register(Project)
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ("id", "name", "gitlab_project_id", "sonar_project_key", "created_at")
     search_fields = ("name", "gitlab_project_id", "sonar_project_key")
-
-@admin.register(ScanRun)
-class ScanRunAdmin(admin.ModelAdmin):
-    list_display = ("id", "project", "status", "created_at")
-    list_filter = ("status",)
