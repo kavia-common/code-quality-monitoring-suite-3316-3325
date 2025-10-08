@@ -1,0 +1,4 @@
+{
+    "command": "python manage.py test",
+    "working_directory": "/home/kavia/workspace/code-generation/code-quality-monitoring-suite-3316-3325/mcp_server_backend"
+}
